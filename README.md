@@ -7,19 +7,19 @@
 
 - 전국 야영(캠핑)장 데이터 EDA 결과로 이루어진 웹페이지 만들기
 
-<br><br>
+<br>
 
 # 기술
 
 ## EDA
 pandas, matplotlib, seaborn, folium, 
 
-<br>
+
 
 ## Web
 Django, html, css
 
-<br><br>
+<br>
 # 팀소개
 <br>
 
@@ -29,5 +29,5 @@ Django, html, css
 
 <br>
 
-# 데이터 출처
+# 참고자료
 https://www.data.go.kr/data/15021139/standard.do

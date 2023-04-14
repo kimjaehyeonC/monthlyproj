@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple Pictures and Descriptions</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      hr {
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .col {
+        flex-basis: 30%;
+        margin-bottom: 20px;
+        padding: 0 10px;
+      }
+      .col img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+      .col a {
+        text-decoration: none;
+        color: #000;
+      }
+      .col h3 {
+        margin-top: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+      }
+      .col p {
+        margin-top: 10px;
+        font-size: 1.1em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>영업/휴업일수 분포</h1>
+    <div class="container">
+      <hr />
+      <div class="col">
+        <a href="{%static 'images/opened_day_dist.png' %}">
+          <img src="{%static 'images/opened_day_dist.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+        <a href="{%static 'images/closed_day_dist.png' %}">
+          <img src="{%static 'images/closed_day_dist.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+        <a href="{%static 'images/korea_total_shop_graph.png' %}">
+          <img src="{%static 'images/korea_total_shop_graph.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+          <h3>영업일수 분포</h3>
+          <p>
+            폐업장, 휴업장을 포함한 모든 캠핑장의 영업일수의 분포를 보면
+            1000일(약 3년)이하, 2000일(약 5년)이상의 경력을 가지는 캠핑장의 수가 많음을 볼 수 있다.
+            3년 정도 사업을 하고 많이 그만 둔다는 것을 예상해 볼 수 있다. 반대로 5년이상이 되는 캠핑장은
+            그만큼 사람들이 많이 찾는 캠핑장이라는 예상이 가능하다.(차후 이러한 예상에 대한 검증을 해볼 수 있다.)
+          </p>
+      </div>
+      <div class="col">
+          <h3>지역별 캠핑 휴업장 수</h3>
+          <p>
+            휴업은 대부분 3년 이내로 하는 것을 알 수 있다.
+          </p>
+      </div>
+      <div class="col">
+          <h3>지역, 연차별 영업장 수</h3>
+          <p>
+            각 지역별로 대부분 영업일수 분포와 비슷한 양상으로 연차별 영업장이 분포하고 있음을 알 수 있다.
+            인천광역시의 경우 3~5년차 영업장의 비율이 많은 이례적인 경우임을 볼 수 있다.
+            추후 인천광역시의 캠핑장의 특성이 다른 캠핑장과 어떻게 다른지 추가 분석을 진행해볼 수 있다.
+          </p>
+      </div>
+      <hr /> 
+    </div>
+    <p><button onclick="location.href='/data_visualization'">뒤로</button></p>
+  </body>
+</html>

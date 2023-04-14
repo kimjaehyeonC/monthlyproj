@@ -9,12 +9,27 @@
     </head>
 
     <body>
-        <h1>전국 지역별 영업장 수</h1>
-        <img src="{% static 'images/k_total_shop.png' %}" >
+        <h1>전국 캠핑장 현황</h1>
+        <a href="/camping">
+        <img src="{% static 'images/activation_map.png' %}" >
+        </a>
         <div class="card-body">
-                <p class="card-text">여기에 설명을 추가한다...여기에 설명을 추가한다...여기에 설명을 추가한다..</p>
+                <p class="card-text">캠핑장의 위치 정보와 현재 영업 상태를 알 수 있다.<br>
+                    전반적으로 서울 근교 경기도/강원도 사이에 캠핑장이 많으며,<br>
+                    영업 상태는 지역에 따른 특이사항이 발견되지 않는다.<br>
+                    (사진 클릭시 지도생성)</p>
         </div>
-        <p><button onclick="location.href='report/'">go</button></p>
+        <h3>EDA 목록</h3>
+        <p><button onclick="location.href='report/'">시기별 개폐업장 분석</button></p>
+        
+        <p><button onclick="location.href='report2/'">지역별 개폐업장 분석</button></p>
+        
+        <p><button onclick="location.href='report3/'">영업/휴업일수 분포</button></p>
+        
+        <p><button onclick="location.href='report4/'">연차별 개폐업장 분석</button></p>
+        
+        <p><button onclick="location.href='report5/'">지역별 시설 면적 비교</button></p>
+        
         <p><button onclick="location.href='/'">홈으로</button></p>
     </body>
 </html>

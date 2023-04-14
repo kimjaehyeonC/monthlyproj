@@ -16,15 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from introduce.views import index, data_understanding, data_visualization, report
+from introduce.views import index, data_understanding, data_visualization, report, report2, report3, report4, report5, camping
 
 urlpatterns = [
 #     path('introduce/', include('introduce.urls')),
     path('', index, name = 'index'),
 #     path('burger/', burger_view),
 #     path('<int:pk>/delte', views.delte, name = 'delete'),
-    path('data_understanding/',data_understanding),
+    path('camping/',camping),
     path('data_visualization/',data_visualization),
+    path('data_understanding/',data_understanding),
     path('data_visualization/report/',report),
+    path('data_visualization/report2/',report2),
+    path('data_visualization/report3/',report3),
+    path('data_visualization/report4/',report4),
+    path('data_visualization/report5/',report5),
     path('admin/', admin.site.urls),
 ]

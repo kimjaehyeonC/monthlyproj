@@ -1,0 +1,22 @@
+{% load static %} <!--css 사용을 위해 load 한다-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>django monthly team project </title>
+        <!-- 마찬가지로 css 파일 경로를 위한 코드  -->
+        <link rel ="stylesheet" href="{% static 'css/index.css' %}">
+    </head>
+
+    <body>
+        <h1>지역별 시설 면적</h1>
+        <a href="{% static 'images/area_region.png' %}">
+        <img src="{% static 'images/area_region.png' %}" >
+        </a>
+        <div class="card-body">
+                <p class="card-text">땅값이 비싼 지역의 캠핑장은 크기가 적을 것이라 예상했으나,<br>
+                    확인 결과 수도권이 그 외 지역에 비해 캠핑장 크기가 작은 것으로는 보이지 않는다.</p>
+        </div>
+        
+        <p><button onclick="location.href='/data_visualization'">뒤로</button></p>
+    </body>
+</html>

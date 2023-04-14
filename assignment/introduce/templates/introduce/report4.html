@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple Pictures and Descriptions</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      hr {
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .col {
+        flex-basis: 30%;
+        margin-bottom: 20px;
+        padding: 0 10px;
+      }
+      .col img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+      .col a {
+        text-decoration: none;
+        color: #000;
+      }
+      .col h3 {
+        margin-top: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+      }
+      .col p {
+        margin-top: 10px;
+        font-size: 1.1em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>연차별 개폐업장 분석</h1>
+    <div class="container">
+      <hr />
+      <div class="col">
+        <a href="{%static 'images/byyear1.png' %}">
+          <img src="{%static 'images/byyear1.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+        <a href="{%static 'images/byyear2.png' %}">
+          <img src="{%static 'images/byyear2.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+        <a href="{%static 'images/byyear3.png' %}">
+          <img src="{%static 'images/byyear3.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+          <h3>연차별 영업장 수</h3>
+          <p>
+            앞의 영업일수 KDE Graph와 동일한 양상을 보이는 그래프이다.
+          </p>
+      </div>
+      <div class="col">
+          <h3>연차별 휴업장 수</h3>
+          <p>
+            연차가 높아질 수록 즉, 영업일 수가 커질수록 휴업을 많이하는 것으로 볼 수 있다.
+            오래 사업을 할 수록 휴업을 한번씩은 할 가능성이 높다는 정도로 생각해 볼 수 있다.
+          </p>
+      </div>
+      <div class="col">
+          <h3>연차별 폐업장 수</h3>
+          <p>
+            연차가 높아질 수록 폐업 수가 적어짐을 알 수 있다. 캠핑 사업을 3년 내로 많이 그만 둔다는 것을 확인할 수 있다.
+            반대로 오래 영업을 했을 수록 캠핑 영업이 잘되는 곳으로 생각해 볼 수 있으므로 폐업 가능성이 적다고 볼 수 있다.
+          </p>
+      </div>
+      <hr /> 
+    </div>
+    <p><button onclick="location.href='/data_visualization'">뒤로</button></p>
+  </body>
+</html>

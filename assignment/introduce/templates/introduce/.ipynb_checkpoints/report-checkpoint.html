@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple Pictures and Descriptions</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      hr {
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .col {
+        flex-basis: 30%;
+        margin-bottom: 20px;
+        padding: 0 10px;
+      }
+      .col img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+      .col a {
+        text-decoration: none;
+        color: #000;
+      }
+      .col h3 {
+        margin-top: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+      }
+      .col p {
+        margin-top: 10px;
+        font-size: 1.1em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>시기별 캠핑장 개폐업 분석</h1>
+    <div class="container">
+      <hr />
+      <div class="col">
+        <a href="{%static 'images/opened_date.png' %}">
+          <img src="{%static 'images/opened_date.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+        <a href="{%static 'images/closed_date.png' %}">
+          <img src="{%static 'images/closed_date.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+        <a href="{%static 'images/stopped.png' %}">
+          <img src="{%static 'images/stopped.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+          <h3>시기별 캠핑장 신규 개장(인허가) 수</h3>
+          <p>
+            새로 허가를 받아 오픈하는 캠핑장의 오픈 시기는 주로 7월에 몰려있다.
+            성수기 타이밍에 맞춰서 개장하는 것이 가장 이득이 많기 때문일 것으로
+            추측된다.
+          </p>
+      </div>
+      <div class="col">
+          <h3>시기별 캠핑장 신규 폐장(폐업) 수</h3>
+          <p>
+            캠핑장이 폐업 신고를 하고 영업을 접는 시기는 주로 8월 또는 9월에
+            몰려있다. 성수기가 지나가는 타이밍에 맞춰서 영업을 그만두는 것이
+            가장 이득이 많기 때문일 것으로 추측된다.
+          </p>
+      </div>
+      <div class="col">
+          <h3>연도별 캠핑장 휴업 수</h3>
+          <p>
+            캠핑장이 2022년에 주로 휴업을 했음을 알 수 있다. 코로나의 영향이 컸을
+            것으로 추측된다
+          </p>
+      </div>
+      <hr /> 
+    </div>
+      <p><button onclick="location.href='/data_visualization'">뒤로</button></p>
+  </body>
+</html>
+

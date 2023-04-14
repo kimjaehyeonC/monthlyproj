@@ -9,11 +9,29 @@
     </head>
 
     <body>
-        <h1>전국 지역별 영업장 수</h1>
-        <img src="{% static 'images/k_total_shop.png' %}" >
-        <div class="card-body">
-                <p class="card-text">여기에 설명을 추가한다...여기에 설명을 추가한다...여기에 설명을 추가한다..</p>
-        </div>
+        <h1>결측값 및 변수 확인</h1>
+            <div style="display:inline-block;vertical-align:top;">
+                <a href="{%static 'images/missingvalue.png' %}">
+                <img src="{% static 'images/missingvalue.png' %}" >
+                </a>
+            </div>
+            <div style="display:inline-block;vertical-align:top;">
+                <a href="{%static 'images/describe.png' %}">
+                <img src="{% static 'images/describe.png' %}" >
+                </a>
+            </div>
+            <div style="display:inline-block;">
+                <p>
+                1) 모든 값이 결측값인 column은 분석에서 제외했다. (사진클릭시 확대)<br>
+                    <br>
+                2) 결측값이 아니더라도 모든 값이 0인 경우 분석에서 제외했다. <br>
+                    <br>
+                3) 인허가일자, 휴,폐업일자, 좌표정보, 시설면적, 주소 등을<br>
+                조합해 시각화하여 간단하게 데이터를 살펴보았다.
+                </p>
+            </div>
         <p><button onclick="location.href='/'">홈으로</button></p>
     </body>
 </html>
+
+

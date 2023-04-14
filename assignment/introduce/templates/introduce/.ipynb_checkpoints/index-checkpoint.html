@@ -1,0 +1,21 @@
+{% load static %} <!--css 사용을 위해 load 한다-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>django monthly team project </title>
+        <!-- 마찬가지로 css 파일 경로를 위한 코드  -->
+        <link rel ="stylesheet" href="{% static 'css/index.css' %}">
+    </head>
+
+    <body>
+        <h1>전국캠핑장 표준데이터 EDA 분석</h1>
+        <!-- 연도별 개업 폐업 수 이미지 보여주는 페이지 -->
+<!--         <button onclick="location.href='openClose/'">연도별 개폐업 수</button>  -->
+<!--         전국 연차별 영업장 수 페이지 -->
+        <h3>데이터 파악</h3>
+        <button onclick="location.href='data_understanding/'">go</button>
+        
+<!--         <h3>데이터 시각화</h3>
+        <button onclick="location.href='korea_total_shop/'">go</button>  -->
+    </body>
+</html>

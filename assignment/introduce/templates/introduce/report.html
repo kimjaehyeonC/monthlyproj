@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple Pictures and Descriptions</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      hr {
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .col {
+        flex-basis: 30%;
+        margin-bottom: 20px;
+        padding: 0 10px;
+      }
+      .col img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+      .col a {
+        text-decoration: none;
+        color: #000;
+      }
+      .col h3 {
+        margin-top: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+      }
+      .col p {
+        margin-top: 10px;
+        font-size: 1.1em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>전국 캠핑 업장 분석</h1>
+    <div class="container">
+      <hr />
+      <div class="col">
+        <a href="{%static 'images/k_total_shop.png' %}">
+          <img src="{%static 'images/k_total_shop.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+        <a href="{%static 'images/k_total_shop.png' %}">
+          <img src="{%static 'images/k_total_shop.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+        <a href="{%static 'images/k_total_shop.png' %}">
+          <img src="{%static 'images/k_total_shop.png' %}" />
+        </a>
+      </div>
+      <div class="col">
+        <a href="{%static 'images/k_total_shop.png' %}">
+          <h3>전국 캠핑장 현황</h3>
+          <p>
+            캠핑장의 위치 정보와 현재 영업 상태를 알 수 있다. 전반적으로 서울
+            근교 경기도/강원도 사이에 캠핑장이 많으며, 영업 상태는 지역에 따른
+            특이사항이 발견되지 않는다.
+          </p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="{%static 'images/k_total_shop.png' %}">
+          <h3>시기별 캠핑장 신규 개장(인허가) 수</h3>
+          <p>
+            새로 허가를 받아 오픈하는 캠핑장의 오픈 시기는 주로 7월에 몰려있다.
+            성수기 타이밍에 맞춰서 개장하는 것이 가장 이득이 많기 때문일 것으로
+            추측된다.
+          </p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="{%static 'images/k_total_shop.png' %}">
+          <h3>시기별 캠핑장 신규 폐장(폐업) 수</h3>
+          <p>
+            캠핑장이 폐업 신고를 하고 영업을 접는 시기는 주로 8월 또는 9월에
+            몰려있다. 성수기가 지나가는 타이밍에 맞춰서 영업을 그만두는 것이
+            가장 이득이 많기 때문일 것으로 추측된다.
+          </p>
+        </a>
+      </div>
+      <hr />
+      <div class="col">
+        <a href="{%static 'images/k_total_shop.png' %}">
+          <img src="{%static 'images/k_total_shop.png' %}" />
+        </a>
+      </div>
+      <div class="col"></div>
+      <!-- Put additional image -->
+      <div class="col"></div>
+      <!-- Put additional image -->
+      <div class="col">
+        <a href="{%static 'images/k_total_shop.png' %}">
+          <h3>지역 별 시설 비교</h3>
+          <p>
+            땅값이 비싼 지역의 캠핑장은 크기가 적을 것이라 예상했으나, 확인 결과
+            수도권이 그 외 지역에 비해 캠핑장 크기가 작은 것으로는 보이지
+            않는다.
+          </p>
+        </a>
+      </div>
+      <div class="col"></div>
+      <!-- Put additional title/description -->
+      <div class="col"></div>
+      <!-- Put additional title/description -->
+      <!-- Repeat the code above for more images -->
+      <hr />
+    </div>
+  </body>
+</html>
